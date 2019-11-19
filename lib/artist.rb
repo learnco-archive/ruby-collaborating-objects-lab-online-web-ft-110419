@@ -29,7 +29,7 @@ class Artist
   end
 end
 
-art = Artist.new("art")
-# Artist.find_or_create_by_name("art - song name")
-s = Song.new("songname")
-Song.all
+# art = Artist.new("art")
+# # Artist.find_or_create_by_name("art - song name")
+# s = Song.new("songname")
+# Song.all
