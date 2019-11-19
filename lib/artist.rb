@@ -28,3 +28,5 @@ class Artist
     # self.all.detect {|artist| artist.name == name} || Artist.new(name).save
   end
 end
+
+art = Artist.new
