@@ -29,4 +29,4 @@ class Artist
   end
 end
 
-art = Artist.new
+art = Artist.new("art")
