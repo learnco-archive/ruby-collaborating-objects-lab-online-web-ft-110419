@@ -30,3 +30,4 @@ class Artist
 end
 
 art = Artist.new("art")
+art.find_or_create_by_name("art - song name")
