@@ -13,6 +13,6 @@ class Song
   end
 
   def artist_name=(name)
-    # artist = self.all.detect { |song| song.artist.name == name || Artist.new(name) }
+    artist = self.all.detect { |song| song.artist.name == name || Artist.new(name) }
   end
 end
