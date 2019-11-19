@@ -1,10 +1,11 @@
+require 'pry'
 class Artist
   attr_accessor :name
 
   @@all = []
+
   def initialize(name)
     @name = name
-    @songs = []
     self.class.all << self
   end
 
@@ -20,13 +21,16 @@ class Artist
     song.artist = self
   end
 
-  def self.find_or_create_by_name(filename)
-    artist_name, song_name = filename.split(" - ")
-    song = Song.new(song_name)
-    # TODO
+  def self.find_or_create_by_name(name)
+    self.all.find { |artist| artist.name == name } || Artist.new(name)
   end
+
+  def print_songs
+    self.songs.each { |song| puts song.name }
+  end
+
+  # def self.new_by_filename(filename)
+  #   artist_name = filename.split(" - ")[0]
+  # end
+
 end
-#
-# t = Artist.new("T")
-# v = Artist.new("V")
-# puts Artist.all
