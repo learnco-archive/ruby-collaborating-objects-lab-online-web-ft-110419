@@ -23,8 +23,11 @@ class Artist
   def self.find_or_create_by_name(filename)
     artist_name, song_name = filename.split(" - ")
     song = Song.new(song_name)
-    # TODO
-    puts self.all
-    # self.all.detect {|artist| artist.name == name} || Artist.new(name).save
+
+    self.all.detect {|artist| artist.name == name} || Artist.new(name).save
+  end
+
+  def ave
+    self.all << self
   end
 end
