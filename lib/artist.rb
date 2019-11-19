@@ -24,7 +24,7 @@ class Artist
     artist_name, song_name = filename.split(" - ")
     song = Song.new(song_name)
 
-    self.all.detect {|artist| artist.name == name} || Artist.new(name).save
+    self.all.detect { |artist| artist.name == name } || Artist.new(name).save
   end
 
   def save
