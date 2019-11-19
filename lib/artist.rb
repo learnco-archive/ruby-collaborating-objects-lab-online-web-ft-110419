@@ -27,7 +27,7 @@ class Artist
     self.all.detect {|artist| artist.name == name} || Artist.new(name).save
   end
 
-  def ave
-    self.all << self
+  def save
+    self.class.all << self
   end
 end
